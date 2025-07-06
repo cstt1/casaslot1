@@ -1,0 +1,101 @@
+/* Загальні стилі */
+body {
+  background: #000;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Центрування вмісту */
+.main-wrapper {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Фонове зображення */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110%; /* трошки більше, щоб було куди плавати */
+  height: 110%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+/* Лого */
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Кожен блок PNG */
+.block {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.block img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Стилі PNG-кнопок */
+.button-img {
+ width: 100px; /* або навіть 150px */
+ height: auto;
+ margin-top: 10px; /* зменш також відступ, щоб не було перекриття */
+ cursor: pointer;
+ transition: transform 0.2s ease;
+}
+
+.button-img:hover {
+  transform: scale(1.05);
+}
+
+.bg-blobs {
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle at 30% 30%, #E412EF, #8E0796);
+  opacity: 0.3;
+  filter: url(#venom-goo) blur(90px);
+  pointer-events: none;
+  animation: morphing 15s ease-in-out infinite alternate,
+             drifting 50s linear infinite;
+
+}
+
+.blob1 { top: 15%; left: 20%; animation-delay: 0s, 0s; }
+.blob2 { top: 50%; left: 50%; animation-delay: 3s, 10s; }
+.blob3 { top: 70%; left: 30%; animation-delay: 6s, 20s; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(5px, -5px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
