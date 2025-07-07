@@ -14,6 +14,9 @@ body {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Фонове зображення */
@@ -31,7 +34,7 @@ body {
 
 /* Лого */
 .logo {
-  width: 200px;
+  width: 250px;
   margin-bottom: 20px;
 }
 
@@ -60,42 +63,105 @@ body {
   transform: scale(1.05);
 }
 
+
+
+.telegram-text {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px 10px;
+}
+
+.features {
+  display: flex;
+   justify-content: center; /* Центрує дочірні елементи */
+  align-items: center; 
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.icon-labels {
+  display: flex;
+  justify-content: center; /* Центрує дочірні елементи */
+  align-items: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.telegram-title {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 10px 0 20px 0;
+  text-align: left;
+}
+
+.telegram-info p {
+  font-size: 25px;
+  font-weight: 300;
+  margin: 0;
+  text-align: left;
+}
+
+.telegram-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.telegram-info li {
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.telegram-footer {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+
 .bg-blobs {
- position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  overflow: visible;
   z-index: -1;
-  pointer-events: none;
+  overflow: hidden;
 }
 
-.blob {
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle at 30% 30%, #E412EF, #8E0796);
-  opacity: 0.3;
-  filter: url(#venom-goo) blur(90px);
-  pointer-events: none;
-  animation: morphing 15s ease-in-out infinite alternate,
-             drifting 50s linear infinite;
-
+.icons-group {
+  display: flex;
+  justify-content: center; /* Центрує дочірні елементи */
+  align-items: center;
+  gap: 30px;
+  margin: 20px auto;
+  max-width: 320px; /* або 100% якщо треба */
 }
 
-.blob1 { top: 15%; left: 20%; animation-delay: 0s, 0s; }
-.blob2 { top: 50%; left: 50%; animation-delay: 3s, 10s; }
-.blob3 { top: 70%; left: 30%; animation-delay: 6s, 20s; }
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  text-align: center;
+}
 
-@keyframes pulse {
-  0% {
-    transform: scale(1) translate(0, 0);
-  }
-  50% {
-    transform: scale(1.05) translate(5px, -5px);
-  }
-  100% {
-    transform: scale(1) translate(0, 0);
-  }
+.icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.icon span {
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
