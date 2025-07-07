@@ -165,3 +165,39 @@ body {
   color: white;
   font-family: 'Montserrat', sans-serif;
 }
+
+.language-switcher {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.language-switcher button {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.lang-menu {
+  display: none;
+  background: rgba(0, 0, 0, 0.8);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.lang-menu a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.lang-menu a:hover {
+  text-decoration: underline;
+}
