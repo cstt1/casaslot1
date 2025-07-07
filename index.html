@@ -14,10 +14,19 @@
     <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="60" xChannelSelector="R" yChannelSelector="G"/>
   </filter>
 </svg>
+
  
   <!-- Основний контейнер -->
   <div class="main-wrapper">
-
+<div class="language-switcher">
+  <button onclick="toggleMenu()">
+    <span id="currentLang">EN</span> ▼
+  </button>
+  <div id="languageMenu" class="lang-menu">
+    <a href="index-en.html">EN</a>
+    <a href="index-es.html">ES</a>
+  </div>
+</div>
     <!-- Логотип -->
     <img class="logo" src="images/logo.png" alt="Logo" />
 
@@ -40,7 +49,7 @@
     <!-- Блок 3 -->
     <div class="block">
       <img src="images/block-1win.png" alt="1win block" />
-      <a href="https://crownslotslink.com/h44310df7" target="_blank">
+      <a href="https://1wlvkt.life/?p=0ii1" target="_blank">
         <img class="button-img" src="images/btn-take.png" style="width: 250px;" alt="Take Button" />
       </a>
     </div>
@@ -76,7 +85,7 @@
       <a href="https://t.me/+RgfXe5AFmFw1YTVi" target="_blank">
         <img class="button-img" src="images/btn-open.png" style="width: 250px;" alt="Open Button" />
       </a>
-      <div class="telegram-footer">PLAY SMART. PLAY PRIVATE.</div>
+      <div class="telegram-footer">Play smaty. Play private.</div>
     </div>
 
   </div>
@@ -98,6 +107,24 @@ VANTA.FOG({
   lowlightColor: 0xffffff,
   baseColor: 0x0
 })
+</script>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("languageMenu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+  }
+
+  // Приховати меню при кліку поза ним
+  window.addEventListener('click', function(e) {
+    const menu = document.getElementById("languageMenu");
+    if (!e.target.closest('.language-switcher')) {
+      menu.style.display = 'none';
+    }
+  });
+
+  // Автоматично підсвічує поточну мову
+  const currentLang = window.location.pathname.includes('es') ? 'ES' : 'EN';
+  document.getElementById('currentLang').textContent = currentLang;
 </script>
 </body>
 </html>
