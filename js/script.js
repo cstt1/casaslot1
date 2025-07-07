@@ -1,4 +1,4 @@
-const blobs = document.querySelectorAll('.blob,.blob1');
+/*const blobs = document.querySelectorAll('.blob,.blob1');
 const mouse = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
 
 // Ловимо мишку
@@ -41,3 +41,4 @@ blobs.forEach((blob) => {
 
   animate();
 });
+*/
